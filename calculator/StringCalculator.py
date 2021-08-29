@@ -13,5 +13,4 @@ class StringCalculator:
 
         numbers = map(int, re.findall(r"-?\d+", numbers))
         numbers = filter(lambda x: x < 1000, numbers)
-
         return sum(numbers)
