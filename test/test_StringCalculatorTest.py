@@ -16,3 +16,7 @@ class test_StringCalculatorTest(TestCase):
         stringCalculatorObj=StringCalculator()
         result=stringCalculatorObj.addition("1,2")#exercise
         assert result==3#validate
+    def test_multiple_number_return_sumation(self):
+        stringCalculatorObj=StringCalculator()
+        result=stringCalculatorObj.addition("2,3,5")#exercise
+        assert result==10#validate
