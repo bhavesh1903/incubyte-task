@@ -41,3 +41,8 @@ class test_StringCalculatorTest(TestCase):
         stringCalculatorObj=StringCalculator()
         result=stringCalculatorObj.addition("//[###]\n1###20###13")
         assert result==34
+
+    def test_multiple_delimiter(self):
+        stringCalculatorObj=StringCalculator()
+        result=stringCalculatorObj.addition("//[#][$]\n1$20#13")
+        assert result==34
