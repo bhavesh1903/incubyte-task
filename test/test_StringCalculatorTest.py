@@ -36,3 +36,8 @@ class test_StringCalculatorTest(TestCase):
         stringCalculatorObj=StringCalculator()
         result=stringCalculatorObj.addition("//;\n1005,2;3")
         assert result==5
+
+    def test_delimiter_any_len(self):
+        stringCalculatorObj=StringCalculator()
+        result=stringCalculatorObj.addition("//[###]\n1###20###13")
+        assert result==34
