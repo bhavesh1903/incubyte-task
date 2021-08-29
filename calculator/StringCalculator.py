@@ -1,3 +1,4 @@
+import re
 class StringCalculator:
     def addition(self,numbers):
         if numbers=="":
@@ -10,6 +11,5 @@ class StringCalculator:
         if count==0:
             return int(numbers)
 
-        lst=numbers.split(",")
-        lst=[int(element) for element in lst]
-        return sum(lst)
+        numbers = map(int, re.findall(r"-?\d+", numbers))
+        return sum(numbers)
