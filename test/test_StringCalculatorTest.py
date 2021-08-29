@@ -26,3 +26,8 @@ class test_StringCalculatorTest(TestCase):
         stringCalculatorObj=StringCalculator()
         result=stringCalculatorObj.addition("1\n2,3")#exercise
         assert result==6#validate
+
+    def test_different_delimiter(self):
+        stringCalculatorObj=StringCalculator()
+        result=stringCalculatorObj.addition("//;\n11;22")#exercise
+        assert result==33#validate
